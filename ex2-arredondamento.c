@@ -3,7 +3,7 @@
 
 int main(){
     float numero;
-    int numeroInteiro, teste1, teste2;
+    int numeroInteiro;
     printf("Digite um número real: ");
     scanf("%f",&numero);
     numeroInteiro = numero;
