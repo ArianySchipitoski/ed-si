@@ -19,21 +19,33 @@ int main(){
     scanf("%f %f %f",&a, &b, &c);
     if(i == 1){
         printf("--- Ordem crescente ---\n");
-        if(a<b && b<c) printf("%g < %g < %g\n",a,b,c);
-        else if(a<c && c<b) printf("%g < %g < %g\n",a,c,b);
-        else if(b<a && a<c) printf("%g < %g < %g\n",b,a,c);
-        else if(b<c && c<a) printf("%g < %g < %g\n",b,c,a);
-        else if(c<a && a<b) printf("%g < %g < %g\n",c,a,b);
-        else printf("%g < %g < %g",c,b,a);
+        if(a<b && a<c){
+            if(b<c) printf("%g < %g < %g\n",a,b,c);
+            else printf("%g < %g < %g\n",a,c,b);
+        }
+        else if(b<a && b<c) {
+            if(a<c) printf("%g < %g < %g\n",b,a,c);
+            else printf("%g < %g < %g\n",b,c,a);
+        }
+        else {
+            if(a<b) printf("%g < %g < %g\n",c,a,b);
+            else printf("%g < %g < %g",c,b,a);
+        }
     }
     else if(i == 2){
         printf("--- Ordem decrescente ---\n");
-        if(a>b && b>c) printf("%g > %g > %g\n",a,b,c);
-        else if(a>c && c>b) printf("%g > %g > %g\n",a,c,b);
-        else if(b>a && a>c) printf("%g > %g > %g\n",b,a,c);
-        else if(b>c && c>a) printf("%g > %g > %g\n",b,c,a);
-        else if(c>a && a>b) printf("%g > %g > %g\n",c,a,b);
-        else printf("%g > %g > %g\n",c,b,a);
+        if(a>b && a>c){
+            if(b>c) printf("%g > %g > %g\n",a,b,c);
+            else printf("%g > %g > %g\n",a,c,b);
+        }
+        else if(b>a && b>c) {
+            if(a>c) printf("%g > %g > %g\n",b,a,c);
+            else printf("%g > %g > %g\n",b,c,a);
+        }
+        else {
+            if(a>b) printf("%g > %g > %g\n",c,a,b);
+            else printf("%g > %g > %g",c,b,a);
+        }
     }
     else if(i == 3){
         printf("--- Maior no meio ---\n");
