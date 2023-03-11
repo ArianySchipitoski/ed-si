@@ -12,23 +12,20 @@ int main()
         printf("[0]Sair\n");
         printf("Escolha uma opção: ");
         scanf("%d", &opcao);
-        if (opcao == 1)
+        switch (opcao)
         {
+        case 1:
             printf("Digite 2 números: ");
             scanf("%d %d", &num1, &num2);
             printf("Soma: %d\n", num1 + num2);
-        }
-        else if (opcao == 2)
-        {
+            break;
+        case 2:
             printf("Digite um número: ");
             scanf("%d", &num1);
             for (int i = 1; i < 11; i++)
-            {
                 printf("%d * %d = %d\n", num1, i, num1 * i);
-            }
-        }
-        else if (opcao == 3)
-        {
+            break;
+        case 3:
             printf("Digite 3 números: ");
             scanf("%d %d %d", &num1, &num2, &num3);
             if (num1 > num2 && num1 > num3)
@@ -37,13 +34,11 @@ int main()
                 printf("Maior: %d\n", num2);
             else
                 printf("Maior: %d\n", num3);
-        }
-        else if (opcao == 0)
-        {
+            break;
+        case 0:
             printf("Já vai tarde! Animal!!!\n");
-        }
-        else
-        {
+            break;
+        default:
             printf("Opção inválida!!!\n");
         }
     }
